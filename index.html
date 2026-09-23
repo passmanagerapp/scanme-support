@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScanMe — Support</title>
+<meta name="description" content="Support, FAQ and contact details for the ScanMe QR and barcode scanner app.">
+<style>
+  :root {
+    --bg: #fbfdf8;
+    --surface: #ffffff;
+    --border: #d8e5da;
+    --text: #1a1c1a;
+    --muted: #444b45;
+    --accent: #006d38;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #101410;
+      --surface: #182018;
+      --border: #2c382e;
+      --text: #e3e6e1;
+      --muted: #a9b3aa;
+      --accent: #7ed79b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #101410;
+    --surface: #182018;
+    --border: #2c382e;
+    --text: #e3e6e1;
+    --muted: #a9b3aa;
+    --accent: #7ed79b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 16px 72px;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 680px; margin: 0 auto; }
+  header { margin-bottom: 40px; }
+  h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .tagline { color: var(--muted); margin: 0; }
+  h2 { font-size: 20px; margin: 40px 0 14px; }
+  h3 { font-size: 16px; margin: 22px 0 6px; }
+  p { margin: 0 0 12px; }
+  a { color: var(--accent); }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 0 0 14px;
+  }
+  .contact { font-size: 17px; }
+  .lang-switch { display: flex; gap: 8px; margin-bottom: 28px; }
+  .lang-switch button {
+    font: inherit;
+    padding: 7px 15px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .lang-switch button[aria-pressed="true"] {
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+  }
+  [hidden] { display: none !important; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>ScanMe</h1>
+    <p class="tagline">QR &amp; Barcode Scanner — Support</p>
+  </header>
+
+  <div class="lang-switch">
+    <button type="button" data-lang="en" aria-pressed="true">English</button>
+    <button type="button" data-lang="tr" aria-pressed="false">Türkçe</button>
+  </div>
+
+  <section data-lang-section="en">
+    <div class="card contact">
+      <strong>Contact</strong>
+      <p style="margin:6px 0 0">
+        Email: <a href="mailto:a.kilincarslan97@gmail.com">a.kilincarslan97@gmail.com</a><br>
+        We usually reply within two business days.
+      </p>
+    </div>
+
+    <h2>Frequently asked questions</h2>
+
+    <h3>The camera screen is black or nothing is detected.</h3>
+    <p>Open Settings → ScanMe and make sure Camera access is allowed. If it is, close the app
+      completely and reopen it. Very dark scenes or a dirty lens also stop detection — try the
+      flashlight button in the app.</p>
+
+    <h3>Which barcodes are supported?</h3>
+    <p>QR codes plus EAN-8, EAN-13, UPC-A, UPC-E, Code 39, Code 93, Code 128, ITF, Codabar,
+      PDF417, Aztec and Data Matrix.</p>
+
+    <h3>Where are my scans stored?</h3>
+    <p>On your device only. ScanMe works offline and never uploads what you scan or create.
+      Deleting the app deletes its history with it.</p>
+
+    <h3>How do I get a QR code image or a scanned PDF out of the app?</h3>
+    <p>Everything you save is listed in History. Open the item and tap Share, then choose
+      “Save Image” (Photos), “Save to Files” or any app you want to send it to.</p>
+
+    <h3>Document scanning does not start.</h3>
+    <p>The document scanner needs camera access and a device that supports it. If the button does
+      nothing, check camera permission first, then restart the app.</p>
+
+    <h3>Do you collect any personal data?</h3>
+    <p>No. There is no advertising SDK, no analytics and no account. See the
+      <a href="https://www.freeprivacypolicy.com/live/07e53e12-725f-48b3-98ce-8690865c8021">privacy policy</a>.</p>
+
+    <h3>How do I report a bug or request a feature?</h3>
+    <p>Email us at <a href="mailto:a.kilincarslan97@gmail.com">a.kilincarslan97@gmail.com</a>. Telling us your iPhone model,
+      iOS version and what you were scanning helps a lot.</p>
+  </section>
+
+  <section data-lang-section="tr" hidden>
+    <div class="card contact">
+      <strong>İletişim</strong>
+      <p style="margin:6px 0 0">
+        E-posta: <a href="mailto:a.kilincarslan97@gmail.com">a.kilincarslan97@gmail.com</a><br>
+        Genellikle iki iş günü içinde yanıtlıyoruz.
+      </p>
+    </div>
+
+    <h2>Sık sorulan sorular</h2>
+
+    <h3>Kamera ekranı siyah ya da hiçbir şey algılanmıyor.</h3>
+    <p>Ayarlar → ScanMe yolundan Kamera erişiminin açık olduğundan emin olun. Açıksa uygulamayı
+      tamamen kapatıp yeniden açın. Çok karanlık ortam veya kirli lens de algılamayı engeller —
+      uygulamadaki flaş düğmesini deneyin.</p>
+
+    <h3>Hangi barkodlar destekleniyor?</h3>
+    <p>QR kodların yanı sıra EAN-8, EAN-13, UPC-A, UPC-E, Code 39, Code 93, Code 128, ITF,
+      Codabar, PDF417, Aztec ve Data Matrix.</p>
+
+    <h3>Taramalarım nerede saklanıyor?</h3>
+    <p>Yalnızca cihazınızda. ScanMe çevrimdışı çalışır; taradığınız veya oluşturduğunuz hiçbir şeyi
+      hiçbir yere yüklemez. Uygulamayı silmek geçmişi de siler.</p>
+
+    <h3>Bir QR kod görselini veya taranan PDF'i uygulamadan nasıl dışarı alırım?</h3>
+    <p>Kaydettiğiniz her şey Geçmiş'te listelenir. Öğeyi açıp Paylaş'a dokunun, ardından
+      “Resmi Kaydet” (Fotoğraflar), “Dosyalar'a Kaydet” ya da göndermek istediğiniz uygulamayı seçin.</p>
+
+    <h3>Doküman tarama başlamıyor.</h3>
+    <p>Doküman tarayıcı kamera erişimine ve bunu destekleyen bir cihaza ihtiyaç duyar. Düğme
+      tepki vermiyorsa önce kamera iznini kontrol edin, sonra uygulamayı yeniden başlatın.</p>
+
+    <h3>Kişisel veri topluyor musunuz?</h3>
+    <p>Hayır. Reklam SDK'sı, analitik ve hesap yok.
+      <a href="https://www.freeprivacypolicy.com/live/07e53e12-725f-48b3-98ce-8690865c8021">Gizlilik
+      politikasına</a> bakabilirsiniz.</p>
+
+    <h3>Hata bildirimi veya özellik önerisi nasıl iletilir?</h3>
+    <p><a href="mailto:a.kilincarslan97@gmail.com">a.kilincarslan97@gmail.com</a> adresine yazın. iPhone modelinizi, iOS
+      sürümünüzü ve ne taradığınızı belirtmeniz çok yardımcı olur.</p>
+  </section>
+
+  <footer>
+    <p>ScanMe — Abdulsamet Kılınçarslan</p>
+  </footer>
+</main>
+
+<script>
+  const buttons = document.querySelectorAll('.lang-switch button');
+  const sections = document.querySelectorAll('[data-lang-section]');
+
+  function show(lang) {
+    sections.forEach(s => { s.hidden = s.dataset.langSection !== lang; });
+    buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('scanme-support-lang', lang); } catch (e) { /* private mode */ }
+  }
+
+  buttons.forEach(b => b.addEventListener('click', () => show(b.dataset.lang)));
+
+  let initial = null;
+  try { initial = localStorage.getItem('scanme-support-lang'); } catch (e) { /* private mode */ }
+  if (!initial) initial = (navigator.language || 'en').toLowerCase().startsWith('tr') ? 'tr' : 'en';
+  show(initial);
+</script>
+</body>
+</html>
