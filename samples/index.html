@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScanMe — Sample codes</title>
+<meta name="description" content="Sample QR codes and barcodes for trying the ScanMe scanner app.">
+<style>
+  :root {
+    --bg: #fbfdf8;
+    --surface: #ffffff;
+    --border: #d8e5da;
+    --text: #1a1c1a;
+    --muted: #444b45;
+    --accent: #006d38;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #101410;
+      --surface: #182018;
+      --border: #2c382e;
+      --text: #e3e6e1;
+      --muted: #a9b3aa;
+      --accent: #7ed79b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #101410;
+    --surface: #182018;
+    --border: #2c382e;
+    --text: #e3e6e1;
+    --muted: #a9b3aa;
+    --accent: #7ed79b;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 48px 16px 72px;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 880px; margin: 0 auto; }
+  header { margin-bottom: 28px; }
+  h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .tagline { color: var(--muted); margin: 0; }
+  h2 { font-size: 20px; margin: 40px 0 14px; }
+  p { margin: 0 0 12px; }
+  a { color: var(--accent); }
+  .back { display: inline-block; margin-bottom: 20px; }
+  .lang-switch { display: flex; gap: 8px; margin-bottom: 28px; }
+  .lang-switch button {
+    font: inherit;
+    padding: 7px 15px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .lang-switch button[aria-pressed="true"] {
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+  }
+  html[lang="en"] [data-l="tr"], html[lang="tr"] [data-l="en"] { display: none; }
+  .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+  .grid.wide { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+  }
+  /* Codes stay black on white in dark mode so every camera can read them. */
+  .code { background: #ffffff; border-radius: 8px; padding: 8px; }
+  .code img { display: block; margin: 0 auto; width: 100%; height: auto; image-rendering: pixelated; }
+  .card h3 { font-size: 15px; margin: 0; }
+  .card p { font-size: 14px; color: var(--muted); margin: 0; }
+  details { font-size: 13px; color: var(--muted); }
+  summary { cursor: pointer; }
+  pre {
+    margin: 6px 0 0;
+    white-space: pre-wrap;
+    word-break: break-all;
+    font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="../"><span data-l="en">← ScanMe support</span><span data-l="tr">← ScanMe destek</span></a>
+
+  <header>
+    <h1><span data-l="en">Sample codes</span><span data-l="tr">Örnek kodlar</span></h1>
+    <p class="tagline">ScanMe — QR &amp; Barcode Scanner</p>
+  </header>
+
+  <div class="lang-switch">
+    <button type="button" data-lang="en" aria-pressed="true">English</button>
+    <button type="button" data-lang="tr" aria-pressed="false">Türkçe</button>
+  </div>
+
+  <p data-l="en">Use these codes to try ScanMe without printing anything. Open this page on a computer or another
+    phone and point ScanMe's camera at a code. To test scanning from a photo, touch and hold an image on iPhone or
+    iPad, choose Save to Photos, then pick it in ScanMe's Gallery tab. All names, numbers and addresses below are
+    fictional.</p>
+  <p data-l="tr">Bu kodlarla hiçbir şey yazdırmadan ScanMe'yi deneyebilirsiniz. Sayfayı bir bilgisayarda veya başka
+    bir telefonda açıp ScanMe'nin kamerasını bir koda doğrultun. Fotoğraftan taramayı denemek için iPhone veya
+    iPad'de bir görsele basılı tutup Fotoğraflar'a Kaydet'i seçin, ardından ScanMe'nin Galeri sekmesinden seçin.
+    Aşağıdaki tüm isimler, numaralar ve adresler hayalîdir.</p>
+
+  <h2><span data-l="en">QR codes</span><span data-l="tr">QR kodlar</span></h2>
+  <div class="grid">
+    <div class="card">
+      <div class="code"><img src="qr-url.png" width="369" height="369" alt="QR code: website"></div>
+      <h3><span data-l="en">Website</span><span data-l="tr">Web sitesi</span></h3>
+      <p data-l="en">Browse opens the ScanMe support page.</p>
+      <p data-l="tr">Göz at, ScanMe destek sayfasını açar.</p>
+      <details><summary><span data-l="en">Content</span><span data-l="tr">İçerik</span></summary><pre>https://passmanagerapp.github.io/scanme-support/</pre></details>
+    </div>
+    <div class="card">
+      <div class="code"><img src="qr-wifi.png" width="369" height="369" alt="QR code: Wi-Fi network"></div>
+      <h3><span data-l="en">Wi-Fi network</span><span data-l="tr">Wi-Fi ağı</span></h3>
+      <p data-l="en">Shows the network name, password and encryption type.</p>
+      <p data-l="tr">Ağ adını, şifreyi ve şifreleme türünü gösterir.</p>
+      <details><summary><span data-l="en">Content</span><span data-l="tr">İçerik</span></summary><pre>WIFI:T:WPA;S:ScanMe Demo;P:scanme-demo-2026;;</pre></details>
+    </div>
+    <div class="card">
+      <div class="code"><img src="qr-contact.png" width="366" height="366" alt="QR code: contact card"></div>
+      <h3><span data-l="en">Contact card</span><span data-l="tr">Kartvizit</span></h3>
+      <p data-l="en">Shows the contact; the add-contact button opens the iOS contact editor.</p>
+      <p data-l="tr">Kişiyi gösterir; kişi ekle düğmesi iOS kişi düzenleyicisini açar.</p>
+      <details><summary><span data-l="en">Content</span><span data-l="tr">İçerik</span></summary><pre>BEGIN:VCARD
+VERSION:3.0
+N:Demo;Alex
+FN:Alex Demo
+ORG:ScanMe
+TITLE:Sample contact
+TEL:+1-555-0100
+EMAIL:alex@example.com
+URL:https://passmanagerapp.github.io/scanme-support/
+END:VCARD</pre></details>
+    </div>
+    <div class="card">
+      <div class="code"><img src="qr-email.png" width="392" height="392" alt="QR code: e-mail"></div>
+      <h3><span data-l="en">E-mail</span><span data-l="tr">E-posta</span></h3>
+      <p data-l="en">Send e-mail opens Mail with the recipient, subject and text filled in.</p>
+      <p data-l="tr">E-posta gönder; alıcı, konu ve metin dolu olarak Mail'i açar.</p>
+      <details><summary><span data-l="en">Content</span><span data-l="tr">İçerik</span></summary><pre>mailto:alex@example.com?subject=Hello%20from%20ScanMe&amp;body=This%20is%20a%20sample%20e-mail.</pre></details>
+    </div>
+    <div class="card">
+      <div class="code"><img src="qr-sms.png" width="370" height="370" alt="QR code: SMS"></div>
+      <h3>SMS</h3>
+      <p data-l="en">Shows the number and the message text.</p>
+      <p data-l="tr">Numarayı ve mesaj metnini gösterir.</p>
+      <details><summary><span data-l="en">Content</span><span data-l="tr">İçerik</span></summary><pre>SMSTO:+15550100:Hello from ScanMe</pre></details>
+    </div>
+    <div class="card">
+      <div class="code"><img src="qr-phone.png" width="377" height="377" alt="QR code: phone number"></div>
+      <h3><span data-l="en">Phone number</span><span data-l="tr">Telefon numarası</span></h3>
+      <p data-l="en">Offers call and add-contact buttons.</p>
+      <p data-l="tr">Arama ve kişi ekleme düğmelerini sunar.</p>
+      <details><summary><span data-l="en">Content</span><span data-l="tr">İçerik</span></summary><pre>tel:+15550100</pre></details>
+    </div>
+    <div class="card">
+      <div class="code"><img src="qr-location.png" width="396" height="396" alt="QR code: location"></div>
+      <h3><span data-l="en">Location</span><span data-l="tr">Konum</span></h3>
+      <p data-l="en">Shows the latitude and longitude.</p>
+      <p data-l="tr">Enlem ve boylamı gösterir.</p>
+      <details><summary><span data-l="en">Content</span><span data-l="tr">İçerik</span></summary><pre>geo:37.3349,-122.0090</pre></details>
+    </div>
+    <div class="card">
+      <div class="code"><img src="qr-event.png" width="392" height="392" alt="QR code: calendar event"></div>
+      <h3><span data-l="en">Calendar event</span><span data-l="tr">Takvim etkinliği</span></h3>
+      <p data-l="en">Shows the event details as text.</p>
+      <p data-l="tr">Etkinlik bilgilerini metin olarak gösterir.</p>
+      <details><summary><span data-l="en">Content</span><span data-l="tr">İçerik</span></summary><pre>BEGIN:VEVENT
+SUMMARY:ScanMe demo meeting
+LOCATION:Cupertino
+DTSTART:20261015T160000Z
+DTEND:20261015T170000Z
+END:VEVENT</pre></details>
+    </div>
+    <div class="card">
+      <div class="code"><img src="qr-text.png" width="369" height="369" alt="QR code: plain text"></div>
+      <h3><span data-l="en">Plain text</span><span data-l="tr">Düz metin</span></h3>
+      <p data-l="en">Copy it, share it or search the web for it.</p>
+      <p data-l="tr">Kopyalayın, paylaşın ya da web'de aratın.</p>
+      <details><summary><span data-l="en">Content</span><span data-l="tr">İçerik</span></summary><pre>Hello! This is a plain text QR code for testing ScanMe.</pre></details>
+    </div>
+  </div>
+
+  <h2><span data-l="en">Barcodes</span><span data-l="tr">Barkodlar</span></h2>
+  <div class="grid wide">
+    <div class="card">
+      <div class="code"><img src="ean13-product.png" width="595" height="220" alt="EAN-13 barcode: product"></div>
+      <h3><span data-l="en">Product (EAN-13)</span><span data-l="tr">Ürün (EAN-13)</span></h3>
+      <p data-l="en">Recognised as a product; Browse searches the number on the web.</p>
+      <p data-l="tr">Ürün olarak tanınır; Göz at numarayı web'de aratır.</p>
+      <details><summary><span data-l="en">Content</span><span data-l="tr">İçerik</span></summary><pre>5901234123457</pre></details>
+    </div>
+    <div class="card">
+      <div class="code"><img src="ean13-isbn.png" width="595" height="220" alt="EAN-13 barcode: book ISBN"></div>
+      <h3><span data-l="en">Book (ISBN)</span><span data-l="tr">Kitap (ISBN)</span></h3>
+      <p data-l="en">Recognised as an ISBN.</p>
+      <p data-l="tr">ISBN olarak tanınır.</p>
+      <details><summary><span data-l="en">Content</span><span data-l="tr">İçerik</span></summary><pre>9780306406157</pre></details>
+    </div>
+    <div class="card">
+      <div class="code"><img src="code128.png" width="528" height="220" alt="Code 128 barcode"></div>
+      <h3>Code 128</h3>
+      <p data-l="en">Common on shipping labels; shown as text.</p>
+      <p data-l="tr">Kargo etiketlerinde yaygındır; metin olarak gösterilir.</p>
+      <details><summary><span data-l="en">Content</span><span data-l="tr">İçerik</span></summary><pre>SCANME-2026</pre></details>
+    </div>
+    <div class="card">
+      <div class="code"><img src="pdf417.png" width="552" height="450" alt="PDF417 barcode" style="max-width:320px"></div>
+      <h3>PDF417</h3>
+      <p data-l="en">Used on boarding passes and ID cards; shown as text.</p>
+      <p data-l="tr">Biniş kartlarında ve kimliklerde kullanılır; metin olarak gösterilir.</p>
+      <details><summary><span data-l="en">Content</span><span data-l="tr">İçerik</span></summary><pre>ScanMe PDF417 sample</pre></details>
+    </div>
+    <div class="card">
+      <div class="code"><img src="aztec.png" width="400" height="400" alt="Aztec code" style="max-width:200px"></div>
+      <h3>Aztec</h3>
+      <p data-l="en">Used on tickets; shown as text.</p>
+      <p data-l="tr">Biletlerde kullanılır; metin olarak gösterilir.</p>
+      <details><summary><span data-l="en">Content</span><span data-l="tr">İçerik</span></summary><pre>ScanMe Aztec sample</pre></details>
+    </div>
+  </div>
+
+  <footer>
+    <p>ScanMe — Abdulsamet Kılınçarslan</p>
+  </footer>
+</main>
+
+<script>
+  const buttons = document.querySelectorAll('.lang-switch button');
+
+  function show(lang) {
+    buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
+    document.documentElement.lang = lang;
+    try { localStorage.setItem('scanme-support-lang', lang); } catch (e) { /* private mode */ }
+  }
+
+  buttons.forEach(b => b.addEventListener('click', () => show(b.dataset.lang)));
+
+  let initial = null;
+  try { initial = localStorage.getItem('scanme-support-lang'); } catch (e) { /* private mode */ }
+  if (!initial) initial = (navigator.language || 'en').toLowerCase().startsWith('tr') ? 'tr' : 'en';
+  show(initial);
+</script>
+</body>
+</html>
